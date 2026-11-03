@@ -1,0 +1,68 @@
+.auth-page, .auth-loading { min-height: 100vh; display: grid; place-content: center; justify-items: center; padding: 28px; background: radial-gradient(ellipse at 20% 10%, #dceee1, transparent 60%), #f4f7f3; }
+.auth-loading { gap: 14px; text-align: center; }
+.auth-loading p { max-width: 520px; color: #6f827a; }
+.auth-card { width: min(430px, calc(100vw - 40px)); padding: 38px; border: 1px solid #dae7de; border-radius: 20px; background: #ffffffed; box-shadow: var(--shadow); }
+.auth-brand { margin-bottom: 30px; }
+.auth-card h1, .permission-header h1 { margin: 12px 0; font-size: 34px; letter-spacing: -.04em; }
+.auth-card h1 em, .permission-header h1 em { color: #83b997; font-style: normal; }
+.auth-description, .permission-header p { color: #6f827a; font-size: 13px; line-height: 1.7; }
+.auth-card .form-label, .menu-form .form-label { font-size: 13px; }
+.auth-card .form-label input, .menu-form input, .menu-form select { font-size: 13px; padding: 12px; }
+.auth-submit { width: 100%; margin-top: 25px; padding: 13px; }
+.auth-error { color: #a4534c; font-size: 13px; line-height: 1.7; }
+.auth-switch { display: block; margin: 22px auto; padding: 6px; color: #39745a; background: transparent; font-size: 13px; }
+.auth-hint { display: block; color: #849691; font-size: 11px; text-align: center; line-height: 1.6; }
+.permission-main { width: min(1280px, 100%); min-height: 100vh; margin: 0 auto; padding: 42px; }
+.permission-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 28px; }
+.permission-actions { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 10px; }
+.admin-badge { padding: 9px 13px; color: #39745a; background: #e1eee5; border-radius: 20px; font-size: 12px; }
+.permission-tabs { display: flex; gap: 12px; margin: 24px 0; border-bottom: 1px solid var(--line); }
+.permission-tabs button { padding: 13px 18px; background: transparent; color: #6f827a; border-bottom: 2px solid transparent; }
+.permission-tabs button.active { border-color: #39745a; color: #244b43; font-weight: 600; }
+.permission-grid { display: grid; grid-template-columns: minmax(240px, .85fr) minmax(300px, 1.4fr); gap: 24px; align-items: start; }
+.permission-card { overflow: hidden; padding: 24px; background: white; border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); }
+.permission-card-heading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; margin-bottom: 24px; }
+.permission-card-heading h2 { margin: 8px 0 0; font-size: 20px; }
+.user-list, .menu-admin-list, .menu-check-list { display: grid; gap: 8px; max-height: 580px; overflow: auto; }
+.user-list-item { display: flex; align-items: center; gap: 12px; padding: 14px; width: 100%; border: 1px solid transparent; border-radius: 9px; background: #f6f9f6; color: var(--ink); text-align: left; cursor: pointer; }
+.user-list-item.selected, .menu-admin-item.selected { border-color: #a7ceb4; background: #edf6ee; }
+.user-list-item > span:nth-child(2), .menu-check-item > span { display: grid; gap: 6px; }
+.user-list-item strong, .menu-check-item strong { font-size: 13px; }
+.user-select { flex: 1; display: flex; align-items: center; gap: 12px; min-width: 0; padding: 0; background: transparent; color: inherit; text-align: left; }
+.user-select > span:nth-child(2) { display: grid; gap: 6px; }
+.user-list-item small, .menu-check-item small { color: #849691; font-size: 11px; overflow-wrap: anywhere; }
+.delete-user { margin-left: auto; padding: 6px 10px; color: #a4534c; background: transparent; font-size: 20px; }
+.menu-check-item { display: flex; align-items: center; gap: 12px; min-height: 64px; padding: 10px 14px; border: 1px solid #e6eee8; border-radius: 8px; }
+.menu-check-item input, .switch-label input { accent-color: #39745a; }
+.menu-admin-item { display: flex; justify-content: space-between; gap: 12px; padding: 15px 12px; border: 1px solid transparent; border-radius: 8px; background: #f6f9f6; color: var(--ink); text-align: left; font-size: 13px; }
+.menu-admin-item small { color: #849691; font-size: 10px; overflow-wrap: anywhere; }
+.switch-label { display: flex; align-items: center; gap: 9px; margin: 20px 0; font-size: 13px; color: #6b897a; }
+.text-danger, .danger-button { color: #a4534c; background: transparent; }
+.text-danger { padding: 8px; }
+.permission-explanation { margin: 0 0 18px; color: #72877c; font-size: 12px; line-height: 1.8; }
+.logout-button { margin-left: auto; padding: 7px; color: #6b897a; background: transparent; font-size: 11px; }
+.sidebar-empty { margin: 24px 12px; font-size: 12px; line-height: 1.8; color: #849691; }
+.directory-only { color: #9aa79f; cursor: default; }
+.no-access-main { min-width: 0; }
+.empty-actions { display: flex; gap: 12px; margin-top: 24px; }
+.sidebar-collapsed .authorized-tree .el-tree-node__content { padding-left: 0 !important; }
+.sidebar-collapsed .authorized-tree .category-name { display: none; }
+.sidebar-collapsed .authorized-tree .category-icon { font-size: 15px; }
+button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid #4c9171; outline-offset: 3px; }
+@media (max-width: 900px) { .permission-main { padding: 24px; } .permission-header { align-items: flex-start; flex-direction: column; } .permission-grid { grid-template-columns: 1fr; } }
+@media (max-width: 720px) {
+  .app-shell { display: block; }
+  .app-shell .sidebar { width: 100%; border-right: 0; border-bottom: 1px solid var(--line); }
+  .app-shell .sidebar .brand-row { height: 65px; justify-content: flex-start; padding: 14px 18px; }
+  .app-shell .sidebar .workspace-switcher, .app-shell .sidebar .sidebar-footer, .app-shell .sidebar .sidebar-label { display: none; }
+  .app-shell .sidebar-scroll { padding: 8px 16px 12px; max-height: 230px; }
+  .app-shell .primary-nav { display: flex; gap: 10px; margin-bottom: 6px; }
+  .app-shell .nav-item { padding: 7px 10px; }
+  .app-shell .main-area { width: 100%; min-width: 0; }
+  .app-shell .topbar-actions { flex-wrap: wrap; }
+  .app-shell .search-box { min-width: 120px; }
+  .app-shell .authorized-tree .category-name { display: block; }
+  .auth-card { padding: 26px; }
+  .permission-main { padding: 20px 14px; }
+  .permission-card { padding: 18px; }
+}
